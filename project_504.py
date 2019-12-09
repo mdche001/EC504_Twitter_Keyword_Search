@@ -6,6 +6,7 @@ Created on Wed Nov 13 13:32:02 2019
 """
 
 import os
+import csv
 
 def key_word_num_in_tweet(tweet,key_word_hashmap):
     res=0
@@ -15,7 +16,7 @@ def key_word_num_in_tweet(tweet,key_word_hashmap):
             res+=1
     return res
 
-def key_word_search(query,res_num=5):
+def key_word_search(tweets,query,res_num=5):
     # by default querie is a string
     key_word_lis=(query.lower()).split(' ')
     key_word_hash_map={}
@@ -33,17 +34,32 @@ def key_word_search(query,res_num=5):
 def read_dataset(file_name):
     file_path=os.getcwd()+os.sep+file_name
     f=open(file_path,'r')
-    res=[s.lower() for s in f.readlines()]
+    res=[(s.lower())[0:-1] for s in f.readlines()]
     f.close()
     return res
 
-def print_tweets(tweets,tweet_num=5):
+def read_csv_dataset(filename):
+    csv_reader = csv.reader(open(filename,'r'))
+    res=[]
+    for row in csv_reader:
+        res.append(': '.join(row[0:2]))
+    return res[1:]
+    
+def print_tweets(tweets,tweet_num=5,with_semicol=True):
     if tweet_num<=len(tweets):
         for i in range(tweet_num):
-            print(i,":",tweets[i])
+            if with_semicol:
+                print(i,":",tweets[i])
+            else:
+                print(tweets[i])
+        print(" ")
     else:
         for i in range(len(tweets)):
-            print(i,':',tweets[i])
+            if with_semicol:
+                print(i,":",tweets[i])
+            else:
+                print(tweets[i])
+        print(" ")
 
 def keyword_hashmap(q):
     word_lis=q.split(' ')
@@ -52,21 +68,30 @@ def keyword_hashmap(q):
         res[word]=1
     return res
 
-print("reading tweets in file")
-tweets=read_dataset('sample_win.txt')
-print("show partial tweets from dataset")
-print_tweets(tweets);
+def main():
+    print("Reading tweets in file...........\n")
+    tweets=read_dataset('sample_win.txt')
+    print_tweets(tweets);
+    
+    q='suffer'
+    search_res=key_word_search(tweets,q)
+    print("\nSearch results\n")
+    print_tweets(search_res)
+      
+    csv_file_name = 'abcnews-date-text.csv'
+    csv_dataset=read_csv_dataset(csv_file_name)
+        
+    res_len=20
+    
+    q='vaile hopes for us free'
+    print("Query: ",q)
+    search_res1=key_word_search(csv_dataset,q,res_len)
+    print("\nSearch results\n")
+    print_tweets(search_res1,res_len,with_semicol=False)
 
-q='suffer'
-search_res=key_word_search(q)
-print("search results")
-print_tweets(search_res)
+if __name__=="__main__":
+    main()
 
-#print_tweets(tweets)
-#q='app usage'
-#key_word_map=keyword_hashmap(q)
-#for t in tweets:
-#    print(t,key_word_num_in_tweet(t,key_word_map))
 
 
 
