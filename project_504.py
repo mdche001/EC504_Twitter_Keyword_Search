@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Nov 13 13:32:02 2019
-
-@author: zephyrus
-"""
 
 import os
 import csv
