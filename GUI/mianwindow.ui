@@ -13,21 +13,35 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#centralwidget {border-image: url(:/Images/background.png) 0 0 0 0 stretch stretch;}</string>
+   </property>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>300</x>
       <y>0</y>
-      <width>321</width>
-      <height>31</height>
+      <width>431</width>
+      <height>71</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
      <string>Twitter Keyword Search</string>
     </property>
     <property name="textFormat">
-     <enum>Qt::AutoText</enum>
+     <enum>Qt::RichText</enum>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -36,11 +50,16 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>920</x>
-      <y>780</y>
+      <x>1010</x>
+      <y>770</y>
       <width>93</width>
       <height>28</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+     </font>
     </property>
     <property name="text">
      <string>Save</string>
@@ -49,40 +68,20 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>790</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Read</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>141</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Text Input</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>10</y>
-      <width>131</width>
-      <height>16</height>
+      <x>10</x>
+      <y>425</y>
+      <width>141</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Text Output</string>
@@ -92,9 +91,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>50</y>
-      <width>561</width>
-      <height>731</height>
+      <y>120</y>
+      <width>1101</width>
+      <height>301</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -103,30 +102,38 @@
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+     </font>
+    </property>
     <widget class="QTextBrowser" name="textBrowser">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>10</x>
        <y>10</y>
-       <width>551</width>
-       <height>711</height>
+       <width>1091</width>
+       <height>281</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Adobe Arabic</family>
+       <family>Arial</family>
        <pointsize>10</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-style:outset;</string>
      </property>
     </widget>
    </widget>
    <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>50</y>
-      <width>561</width>
-      <height>731</height>
+      <x>10</x>
+      <y>70</y>
+      <width>1101</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -135,22 +142,167 @@
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+     </font>
+    </property>
     <widget class="QPlainTextEdit" name="plainTextEdit">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>531</width>
-       <height>711</height>
+       <width>851</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Adobe Arabic</family>
+       <family>Arial</family>
        <pointsize>10</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">border-style:outset;</string>
+     </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>1000</x>
+       <y>10</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>10</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Upload</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>470</y>
+      <width>1101</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+     </font>
+    </property>
+    <widget class="QTextBrowser" name="textBrowser_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>1091</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-style:outset;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>750</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Images/BU.png) 0 0 0 0 stretch stretch;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_5" native="true">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>750</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Images/twitter.png) 0 0 0 0 stretch stretch;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Text Input</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -165,7 +317,9 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Images.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>pushButton</sender>
@@ -174,8 +328,8 @@
    <slot>save()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>173</x>
-     <y>550</y>
+     <x>1010</x>
+     <y>796</y>
     </hint>
     <hint type="destinationlabel">
      <x>292</x>
@@ -190,8 +344,8 @@
    <slot>read()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>693</x>
-     <y>545</y>
+     <x>1010</x>
+     <y>453</y>
     </hint>
     <hint type="destinationlabel">
      <x>565</x>
@@ -199,8 +353,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>search()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>979</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1030</x>
+     <y>38</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>read()</slot>
+  <slot>search()</slot>
  </slots>
 </ui>
