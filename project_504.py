@@ -2,6 +2,9 @@
 
 import os
 import csv
+import random
+import time
+import matplotlib.pyplot as plt
 
 def key_word_num_in_tweet(tweet,key_word_hashmap):
     res=0
@@ -63,6 +66,29 @@ def keyword_hashmap(q):
         res[word]=1
     return res
 
+def runtime_analysis(dataset):
+    dataset_len_lis=list(range(100,500000,8000))
+    runtime_lis=[]
+    for dataset_len in dataset_len_lis:
+        word_lis=[]
+        while len(word_lis)<5:
+            rand_tweet=random.choice(dataset)
+            word_lis=rand_tweet.split(' ')
+        
+        rand_query=' '.join(random.sample(word_lis,5))
+        part_dataset=random.sample(dataset,dataset_len)
+        start_time=time.time()
+        key_word_search(part_dataset,rand_query,res_num=10)
+        end_time=time.time()
+        runtime_lis.append(end_time-start_time)
+    plt.figure()
+    plt.plot(dataset_len_lis,runtime_lis)
+    plt.xlabel("Dataset scale",fontsize = 25)
+    plt.ylabel("Running time",fontsize = 25)
+    plt.title("Key word searching",fontsize = 25)
+    plt.show()
+    
+        
 def main():
     print("Reading tweets in file...........\n")
     tweets=read_dataset('sample_win.txt')
@@ -75,6 +101,7 @@ def main():
       
     csv_file_name = 'abcnews-date-text.csv'
     csv_dataset=read_csv_dataset(csv_file_name)
+    print(len(csv_dataset))
         
     res_len=20
     
@@ -83,72 +110,11 @@ def main():
     search_res1=key_word_search(csv_dataset,q,res_len)
     print("\nSearch results\n")
     print_tweets(search_res1,res_len,with_semicol=False)
+    
+    runtime_analysis(csv_dataset)
 
 if __name__=="__main__":
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
