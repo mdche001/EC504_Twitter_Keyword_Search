@@ -20,23 +20,20 @@ These instructions will help you to run this project on your own machines or pla
 Python Version: 3.6.5<br>		
 ...<br>
 
-#### Dataset:
-...<br>
-
-#### Key needed: 
-...<br>
-
 ## Running the source code
 
-...<br>
+You can firstly setup the packages via requirements.txt in GUI folder.
+
+Run the mywindow.py to start the gui. Then input your keywords in first text box and click the upload button to upload your file. The file should be .txt or .csv. After that, you are able to search keywords in the file you uploaded by click on the search button. The result will display on the third text box.
 
 ## Result
 
-...<br>
+
+![image](https://github.com/mdche001/EC504_Twitter_Keyword_Search/blob/master/Images/res1.png) 
 
 
 ## Authors
 
-* **Mingdao Che** - *nan* - [Repo](https://github.com/mdche001/EC504_Twitter_Keyword_Search/)
-* **Ziyu Zhao** - *nan* 
-* **Zhibin Huang** - *nan*
+* **Mingdao Che**  [Repo](https://github.com/mdche001/EC504_Twitter_Keyword_Search/)
+* **Ziyu Zhao** 
+* **Zhibin Huang**
