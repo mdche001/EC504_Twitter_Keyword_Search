@@ -20,6 +20,9 @@ These instructions will help you to run this project on your own machines or pla
 Python Version: 3.6.5<br>		
 ...<br>
 
+## demo vedio:
+[Repo](https://github.com/mdche001/EC504_Twitter_Keyword_Search/blob/master/Images/MainWindow%202019-12-10%2002-32-09.mp4)
+
 ## Running the source code
 
 You can firstly setup the packages via requirements.txt in GUI folder.
