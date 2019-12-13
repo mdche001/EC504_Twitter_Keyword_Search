@@ -7,7 +7,7 @@ To Search Key word in tweets.<br>
 
 The diagram of raw detection is as follows
 
-![image](...) 
+![image](https://github.com/mdche001/EC504_Twitter_Keyword_Search/blob/master/Images/504%20gui%20diagram.png) 
 
 
 ## Getting Started
