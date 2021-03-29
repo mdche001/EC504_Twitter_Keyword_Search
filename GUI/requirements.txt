@@ -29,7 +29,7 @@ parso==0.5.1
 pickleshare==0.7.5
 prometheus-client==0.7.1
 prompt-toolkit==3.0.2
-Pygments==2.5.2
+Pygments==2.7.4
 PyQt5==5.13.2
 PyQt5-sip==12.7.0
 pyrsistent==0.15.6
